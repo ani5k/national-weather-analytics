@@ -1,0 +1,15 @@
+pymongo
+python-dotenv
+pandas
+numpy
+sentence-transformers
+scikit-learn
+geopy
+Pillow
+fastapi
+uvicorn[standard]
+requests
+schedule
+pydantic
+kafka-python
+feedparser

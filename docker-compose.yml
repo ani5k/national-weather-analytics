@@ -1,0 +1,63 @@
+services:
+  mongo:
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  redpanda:
+    image: docker.redpanda.com/redpandadata/redpanda:v24.2.4
+    command:
+      - redpanda
+      - start
+      - --overprovisioned
+      - --smp
+      - "1"
+      - --memory
+      - 512M
+      - --reserve-memory
+      - 0M
+      - --node-id
+      - "0"
+      - --check=false
+      - --kafka-addr
+      - internal://0.0.0.0:9092,external://0.0.0.0:19092
+      - --advertise-kafka-addr
+      - internal://redpanda:9092,external://127.0.0.1:19092
+    ports:
+      - "19092:19092"
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      MONGO_URI: mongodb://mongo:27017
+      DB_NAME: weather_db
+      COLLECTION_NAME: weather_data
+      KAFKA_BOOTSTRAP: redpanda:9092
+      CORS_ORIGINS: http://localhost:5173,http://127.0.0.1:5173
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongo
+      - redpanda
+    command: python -m uvicorn api.main:app --host 0.0.0.0 --port 8000
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      MONGO_URI: mongodb://mongo:27017
+      DB_NAME: weather_db
+      COLLECTION_NAME: weather_data
+      KAFKA_BOOTSTRAP: redpanda:9092
+    depends_on:
+      - mongo
+      - redpanda
+    command: python -m worker.main
+
+volumes:
+  mongo_data:

@@ -1,0 +1,8 @@
+{
+  "label_count": 0,
+  "last_refresh_at": "2026-09-11T08:52:15.391580Z",
+  "message": "Model updated - 0 new labels since last train",
+  "heldout_accuracy_before": 0.0,
+  "heldout_accuracy_after": 0.0,
+  "classes": []
+}

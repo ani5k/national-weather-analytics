@@ -1,0 +1,102 @@
+[
+  {
+    "report_id": "RPT_001",
+    "text": "Heavy rain reported in Whitefield, Bengaluru",
+    "location": {
+      "city": "Bengaluru",
+      "latitude": 13.0078,
+      "longitude": 77.7512
+    },
+    "timestamp": "2026-08-29T10:00:00Z"
+  },
+  {
+    "report_id": "RPT_002",
+    "text": "Whitefield is experiencing heavy rainfall",
+    "location": {
+      "city": "Bengaluru",
+      "latitude": 13.0080,
+      "longitude": 77.7515
+    },
+    "timestamp": "2026-08-29T10:30:00Z"
+  },
+  {
+    "report_id": "RPT_003",
+    "text": "Roads are flooded after heavy rain in Whitefield",
+    "location": {
+      "city": "Bengaluru",
+      "latitude": 13.0082,
+      "longitude": 77.7518
+    },
+    "timestamp": "2026-08-29T11:00:00Z"
+  },
+  {
+    "report_id": "RPT_004",
+    "text": "Extreme heat reported across Delhi",
+    "location": {
+      "city": "Delhi",
+      "latitude": 28.6139,
+      "longitude": 77.2090
+    },
+    "timestamp": "2026-08-29T12:00:00Z"
+  },
+  {
+    "report_id": "RPT_005",
+    "text": "Dense fog observed in Delhi this morning",
+    "location": {
+      "city": "Delhi",
+      "latitude": 28.6200,
+      "longitude": 77.2100
+    },
+    "timestamp": "2026-08-29T07:00:00Z"
+  },
+  {
+    "report_id": "RPT_006",
+    "text": "Strong winds reported in Mumbai",
+    "location": {
+      "city": "Mumbai",
+      "latitude": 19.0760,
+      "longitude": 72.8777
+    },
+    "timestamp": "2026-08-29T14:00:00Z"
+  },
+  {
+    "report_id": "RPT_007",
+    "text": "Thunderstorm with lightning reported in Chennai",
+    "location": {
+      "city": "Chennai",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "timestamp": "2026-08-29T15:00:00Z"
+  },
+  {
+    "report_id": "RPT_008",
+    "text": "Dust storm reported near Jaipur",
+    "location": {
+      "city": "Jaipur",
+      "latitude": 26.9124,
+      "longitude": 75.7873
+    },
+    "timestamp": "2026-08-29T16:00:00Z"
+  },
+  {
+    "report_id": "RPT_009",
+    "text": "Heavy rainfall causing waterlogging in Whitefield",
+    "location": {
+      "city": "Bengaluru",
+      "latitude": 13.0079,
+      "longitude": 77.7514
+    },
+    "timestamp": "2026-08-29T10:45:00Z"
+  },
+  {
+    "report_id": "RPT_010",
+    "text": "Severe heatwave conditions in Delhi",
+    "location": {
+      "city": "Delhi",
+      "latitude": 28.6145,
+      "longitude": 77.2085
+    },
+    "timestamp": "2026-08-29T12:30:00Z"
+  }
+]

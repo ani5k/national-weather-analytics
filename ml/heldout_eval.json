@@ -1,0 +1,14 @@
+[
+  {
+    "text": "Waterlogging on roads after heavy rain",
+    "event_type": "flooding"
+  },
+  {
+    "text": "Severe heat advisory for afternoon hours",
+    "event_type": "heatwave"
+  },
+  {
+    "text": "Thunder and lightning overnight",
+    "event_type": "thunderstorm"
+  }
+]

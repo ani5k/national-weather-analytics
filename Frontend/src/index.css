@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FFFFFF;
+  color: oklch(27% 0.03 236.824);
+}
+
+/* Thin, light scrollbars matching the new palette */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(95.1% 0.026 236.824);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(83% 0.03 236.824);
+  border-radius: 4px;
+}
+
+/* Leaflet base — plain white, no dark tint needed since we use a label-free light basemap */
+.leaflet-container {
+  background: #FFFFFF !important;
+  font-family: 'Inter', sans-serif;
+}
+
+/* English-only state name labels we draw ourselves via DivIcon (never rely on tile text) */
+.state-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  color: oklch(30% 0.03 236.824);
+  text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Pulsing ring for unverified / high-severity markers — signature "needs attention" motif */
+.pulse-marker {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+.pulse-marker::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  animation: pulse-ring 1.8s ease-out infinite;
+}
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-marker::after {
+    animation: none;
+  }
+}
